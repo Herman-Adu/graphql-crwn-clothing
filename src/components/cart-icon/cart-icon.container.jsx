@@ -17,23 +17,6 @@ const GET_ITEM_COUNT = gql`
     }
 `;
 
-//import { Mutation, Query } from 'react-apollo';
-
-/* const CartIconContainer = () => (
-    <Query query={GET_ITEM_COUNT}>
-        {({ data: { itemCount } }) => (
-            <Mutation mutation={TOGGLE_CART_HIDDEN} >
-            {toggleCartHidden => (
-                <CartIcon toggleCartHidden={toggleCartHidden} itemCount={itemCount} /> 
-            )}
-            </Mutation>
-        )}    
-    </Query>
-); */
-
-//  export default CartIconContainer
-
-
 const CartIconContainer = ({ data: { itemCount }, toggleCartHidden }) => (    
     <CartIcon toggleCartHidden={toggleCartHidden} itemCount={itemCount} />          
 );
@@ -41,4 +24,4 @@ const CartIconContainer = ({ data: { itemCount }, toggleCartHidden }) => (
 export default flowRight(
     graphql(GET_ITEM_COUNT),
     graphql(TOGGLE_CART_HIDDEN, { name: 'toggleCartHidden' })
-  )(CartIconContainer);
+)(CartIconContainer);
