@@ -26,7 +26,8 @@
   "resolutions": {
     "babel-jest": "24.7.1",
     "acorn": "^6.4.1",
-    "kind-of": "^6.0.3"
+    "kind-of": "^6.0.3",
+    "serialize-javascript": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
